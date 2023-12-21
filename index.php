@@ -38,7 +38,43 @@
                     <div class="sign-avatar">
                         <img src="public/img/avatar-sign.png" alt="">
                     </div>
-                    <header class="sign-title">Acceso</header>              
+                    <header class="sign-title">Acceso</header>    
+                    
+                    <?php
+
+                        if(isset($_GET["m"])){
+                            switch($_GET["m"]){
+                                case "1": 
+                                ?>
+                                    <div class="alert alert-warning alert-no-border alert-close alert-dismissible fade in" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        El usuario y/o contraseña son incorrectos.
+                                    </div>
+
+                                <?php  
+                                    
+                                break;   
+                                
+                                case "2":
+                                ?>
+                                    <div class="alert alert-warning alert-no-border alert-close alert-dismissible fade in" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        Los campos estan vacíos.
+                                    </div>
+
+                                <?php  
+                                
+                                break; 
+                            
+                            } 
+                        }    
+
+                    ?>
+                    
                     <div class="form-group">
                         <input type="text" id="usu_correo" name="usu_correo" Class="form-control" placeholder="E-Mail"/>
                     </div>
