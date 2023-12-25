@@ -55,17 +55,15 @@
 					<div class="col-lg-6">
 						<fieldset class="form-group">
 							<label class="form-label semibold" for="exampleInput">Categoria</label>
-							<select id="exampleSelect" class="form-control">
-                                <option>Hardware</option>
-                                <option>Software</option>
-                                <option>Otros</option>
+							<select id="cat_id" class="form-control">
+                                
                             </select>
 						</fieldset>
 					</div>
 					<div class="col-lg-6">
 						<fieldset class="form-group">
 							<label class="form-label semibold" for="exampleInputEmail1">Titulo</label>
-							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese titulo">
+							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese Titulo">
 						</fieldset>
 					</div>
 					<div class="col-lg-12">
