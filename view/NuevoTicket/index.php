@@ -70,7 +70,7 @@
 						<fieldset class="form-group">
 							<label class="form-label semibold" for="exampleInputPassword1">Descripcion</label>
 							<div class="summernote-theme-1">
-					            <textarea  id="tikc_descrip" class="summernote" name="name">Hello Summernote</textarea>
+					            <textarea  id="tikc_descrip" class="summernote" name="name"></textarea>
 				            </div>
 						</fieldset>
 					</div>
