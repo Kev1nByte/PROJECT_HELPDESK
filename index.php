@@ -34,11 +34,14 @@
     <div class="page-center">
         <div class="page-center-in">
             <div class="container-fluid">
+
+                <input type="hidden" id="rol_id" name="rol_id" value="1">
+
                 <form class="sign-box" action="" method="post" id="login_form">
                     <div class="sign-avatar">
                         <img src="public/img/avatar-sign.png" alt="">
                     </div>
-                    <header class="sign-title">Acceso</header>    
+                    <header class="sign-title" id="lbltitulo">Acceso Usuario</header>    
                     
                     <?php
 
@@ -85,6 +88,11 @@
                         <div class="float-right reset">
                             <a href="reset-password.html">Cambiar Contraseña</a>
                         </div>
+
+                        <div class="float-left reset">
+                            <a href="#" id="btnsoporte">Acceso Soporte</a>
+                        </div>
+
                     </div>
                     <input type="hidden" name="enviar" class="form-control" value="si"></input>
                     <button type="submit" class="btn btn-rounded">Acceder</button>
@@ -99,23 +107,26 @@
 <script src="public/js/lib/tether/tether.min.js"></script>
 <script src="public/js/lib/bootstrap/bootstrap.min.js"></script>
 <script src="public/js/plugins.js"></script>
-    <script type="text/javascript" src="public/js/lib/match-height/jquery.matchHeight.min.js"></script>
-    <script>
-        $(function() {
-            $('.page-center').matchHeight({
-                target: $('html')
-            });
-
-            $(window).resize(function(){
-                setTimeout(function(){
-                    $('.page-center').matchHeight({ remove: true });
-                    $('.page-center').matchHeight({
-                        target: $('html')
-                    });
-                },100);
-            });
+<script type="text/javascript" src="public/js/lib/match-height/jquery.matchHeight.min.js"></script>    
+<script>
+    $(function() {
+        $('.page-center').matchHeight({
+            target: $('html')
         });
-    </script>
+
+        $(window).resize(function(){
+            setTimeout(function(){
+                $('.page-center').matchHeight({ remove: true });
+                $('.page-center').matchHeight({
+                    target: $('html')
+                });
+            },100);
+        });
+    });
+</script>
 <script src="public/js/app.js"></script>
+
+<script type="text/javascript" src="index.js"></script>    
+
 </body>
 </html>
