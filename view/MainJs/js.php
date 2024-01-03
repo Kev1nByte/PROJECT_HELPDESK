@@ -10,3 +10,4 @@
 
 <script src="../../public/js/lib/summernote/summernote.min.js"></script>
 
+<script src="../../public/js/lib/fancybox/jquery.fancybox.pack.js"></script>
