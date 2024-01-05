@@ -37,9 +37,8 @@
                     <div class="tbl-cell">
                         <h3 id="lblnomidticket">Detalle Ticket - 1</h3>
                         <div id="lblestado"></div>
-                        <span class="label label-pill label-danger">Cerrado</span>
-                        <span class="label label-pill label-primary">Nombre del Usuario</span>
-                        <span class="label label-pill label-default">99/99/9999</span>
+                        <span class="label label-pill label-primary" id="lblnombusuario"></span>
+                        <span class="label label-pill label-default" id="lblfechcrea"></span>
                         <ol class="breadcrumb breadcrumb-simple">
                         <li><a href="#">Home</a></li>
                         <li class="active">Detalle Ticket</li>
