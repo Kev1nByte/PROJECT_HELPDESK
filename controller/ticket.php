@@ -145,6 +145,10 @@
             }   
         break;
 
+        case "insertdetalle":
+            $ticket->insert_ticketdetalle($_POST["tick_id"],$_POST["usu_id"],$_POST["tickd_descrip"]);
+        break;
+
     
     }
 ?>

@@ -25,7 +25,7 @@ $(document).ready(function(){
     });
 
     $('#tickd_descrip').summernote({
-        height: 250,
+        height: 350,
         lang: "es-ES",
         callbacks: {
             onImageUpload: function(image) {
@@ -39,7 +39,7 @@ $(document).ready(function(){
     });
 
     $('#tickd_descripusu').summernote({
-        height: 250,
+        height: 350,
         lang: "es-ES",
         callbacks: {
             onImageUpload: function(image) {
@@ -51,6 +51,8 @@ $(document).ready(function(){
             }
         }
     });
+
+    $('#tickd_descripusu').summernote('disable');
     
 });
 
