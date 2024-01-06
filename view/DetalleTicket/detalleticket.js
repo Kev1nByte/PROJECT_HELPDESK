@@ -75,13 +75,16 @@ $(document).on("click","#btnenviar", function(){
     var tick_id = getUrlParameter('ID');
     var usu_id = $('#user_idx').val();
     var tickd_descrip = $('#tickd_descrip').val();
-    
-    $.post("../../controller/ticket.php?op=insertdetalle", { tick_id:tick_id, usu_id:usu_id, tickd_descrip:tickd_descrip}, function (data) {
-        listardetalle(tick_id);
-        $('#tickd_descrip').summernote('reset');
-        swal("Correcto!", "Registrado Correctamente", "success");
-    }); 
-   
+
+    if ($('#tickd_descrip').summernote('isEmpty')){
+        swal("Advertencia!", "Falta Descripción", "warning");
+    }else{
+        $.post("../../controller/ticket.php?op=insertdetalle", { tick_id:tick_id, usu_id:usu_id, tickd_descrip:tickd_descrip}, function (data) {
+            listardetalle(tick_id);
+            $('#tickd_descrip').summernote('reset');
+            swal("Correcto!", "Registrado Correctamente", "success");
+        }); 
+    }
 });
 
 $(document).on("click","#btncerrarticket", function(){
@@ -92,5 +95,4 @@ function listardetalle(tick_id){
     $.post("../../controller/ticket.php?op=listardetalle", { tick_id : tick_id }, function (data) {
         $('#lbldetalle').html(data);
     }); 
-  
 }
