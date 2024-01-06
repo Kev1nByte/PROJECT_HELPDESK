@@ -13,6 +13,7 @@
 
         case "update":
             $ticket->update_ticket($_POST["tick_id"]);
+            $ticket->insert_ticketdetalle_cerrar($_POST["tick_id"],$_POST["usu_id"]);
         break;
    
         case "listar_x_usu":
@@ -129,6 +130,7 @@
                     $output["tick_id"] = $row["tick_id"];
                     $output["usu_id"] = $row["usu_id"];
                     $output["cat_id"] = $row["cat_id"];
+
                     $output["tick_titulo"] = $row["tick_titulo"];
                     $output["tick_descrip"] = $row["tick_descrip"];
 
@@ -153,6 +155,6 @@
             $ticket->insert_ticketdetalle($_POST["tick_id"],$_POST["usu_id"],$_POST["tickd_descrip"]);
         break;
 
-    
+        
     }
 ?>
