@@ -14,10 +14,32 @@ $(document).ready(function(){
         $('#lblestado').html(data.tick_estado);
         $('#lblnombusuario').html(data.usu_nom+''+data.usu_ape);
         $('#lblfechcrea').html(data.fech_crea);
+
+        $('#lblnomidticket').html("Detalle Ticket - "+data.tick_id);
+
+        $('#cat_nom').val(data.cat_nom);
+        $('#tick_titulo').val(data.tick_titulo);
+
+        $('#tickd_descripusu').summernote ('code',data.tick_descrip);
+
     });
 
     $('#tickd_descrip').summernote({
-        height: 200,
+        height: 250,
+        lang: "es-ES",
+        callbacks: {
+            onImageUpload: function(image) {
+                console.log("Image detect...");
+                myimagetreat(image[0]);
+            },
+            onPaste: function (e) {
+                console.log("Text detect...");
+            }
+        }
+    });
+
+    $('#tickd_descripusu').summernote({
+        height: 250,
         lang: "es-ES",
         callbacks: {
             onImageUpload: function(image) {

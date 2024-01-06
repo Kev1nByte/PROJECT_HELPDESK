@@ -67,8 +67,10 @@
 
                     <div class="col-lg-12">
                         <fieldset class="form-group">
-                        <label class="form-label semibold" for="tickd_descripusu">Descripción</label>
-                        <input type="text" class="form-control" id="tick_titulo" name="tick_titulo">
+                            <label class="form-label semibold" for="tickd_descripusu">Descripción</label>
+                            <div class="summernote-theme-1">
+                                <textarea id="tickd_descripusu" name="tickd_descripusu" class="summernote" name="name"></textarea>
+                            </div>
                         </fieldset>
                     </div>
 
