@@ -130,6 +130,21 @@
             return $resultado=$sql->fetchAll();
         }
 
+        public function update_ticket($tick_id){
+            $conectar= parent::conexion();
+            parent::set_names();
+            $sql="update tm_ticket 
+                set	
+                    tick_estado = 'Cerrado'
+                where
+                    tick_id = ?";
+            $sql=$conectar->prepare($sql);
+            $sql->bindValue(1, $tick_id);
+            $sql->execute();
+            return $resultado=$sql->fetchAll();
+        }
+
+
     }
 
 ?>

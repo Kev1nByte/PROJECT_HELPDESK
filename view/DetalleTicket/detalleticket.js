@@ -88,7 +88,34 @@ $(document).on("click","#btnenviar", function(){
 });
 
 $(document).on("click","#btncerrarticket", function(){
-    
+    swal({
+        title: "HelpDesk",
+        text: "¿Está seguro de Cerrar el Ticket?",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonClass: "btn-warning",
+        confirmButtonText: "Si",
+        cancelButtonText: "No",
+        closeOnConfirm: false
+    },
+    function(isConfirm) {
+        if (isConfirm) {
+            var tick_id = getUrlParameter('ID');
+
+            $.post("../../controller/ticket.php?op=update", { tick_id : tick_id }, function (data) {
+
+            }); 
+
+            listardetalle(tick_id);
+
+            swal({
+                title: "HelpDesk!",
+                text: "Ticket Cerrado correctamente.",
+                type: "success",
+                confirmButtonClass: "btn-success"
+            });
+        }
+    });
 });
 
 function listardetalle(tick_id){
