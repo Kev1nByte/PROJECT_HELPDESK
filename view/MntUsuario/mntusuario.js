@@ -58,6 +58,11 @@ $(document).ready(function(){
     }).DataTable(); 
 });
 
+function editar(usu_id){
+    $('#mdltitulo').html('Editar Registro');
+    $('#modalmantenimiento').modal('show');
+}
+
 function eliminar(usu_id){
     swal({
         title: "HelpDesk",
@@ -86,5 +91,11 @@ function eliminar(usu_id){
         }
     });
 }
+
+$(document).on("click","#btnnuevo", function(){
+    $('#mdltitulo').html('Nuevo Registro');
+    $('#usuario_form')[0].reset();
+    $('#modalmantenimiento').modal('show');
+});
 
 init();
