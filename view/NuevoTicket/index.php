@@ -17,20 +17,18 @@
 </head>
 <body class="with-side-menu">
 
-    <?php
-        require_once("../MainHeader/header.php");
-    ?>
+    <?php require_once("../MainHeader/header.php");?>
 
-	<div class="mobile-menu-left-overlay"></div>
-	
-    <?php
-        require_once("../MainNav/nav.php");
-    ?>
+    <div class="mobile-menu-left-overlay"></div>
+    
+    <?php require_once("../MainNav/nav.php");?>
 
-    <!-- Contenido     -->
+	<!-- Contenido -->
 	<div class="page-content">
+		
 		<div class="container-fluid">
-            <header class="section-header">
+
+			<header class="section-header">
 				<div class="tbl">
 					<div class="tbl-row">
 						<div class="tbl-cell">
@@ -44,19 +42,21 @@
 				</div>
 			</header>
 
-            <div class="box-typical box-typical-padding">
+			<div class="box-typical box-typical-padding">
 				<p>
-                    Desde esta ventana podra generar nuevos tickets de Heldeskp:
- 				</p>
+					Desde esta ventana podra generar nuevos tickets de HelpDesk.
+				</p>
 
-	            <h5 class="m-t-lg with-border">Ingresar Información</h5>
+				<h5 class="m-t-lg with-border">Ingresar Información</h5>
 
 				<div class="row">
 					<form method="post" id="ticket_form">
+
 						<input type="hidden" id="usu_id" name="usu_id" value="<?php echo $_SESSION["usu_id"] ?>">
+
 						<div class="col-lg-6">
 							<fieldset class="form-group">
-								<label class="form-label semibold" for="cat_id">Categoria</label>
+								<label class="form-label semibold" for="exampleInput">Categoria</label>
 								<select id="cat_id" name="cat_id" class="form-control">
 									
 								</select>
@@ -70,34 +70,31 @@
 						</div>
 						<div class="col-lg-12">
 							<fieldset class="form-group">
-								<label class="form-label semibold" for="tick_descrip">Descripcion</label>
+								<label class="form-label semibold" for="tick_descrip">Descripción</label>
 								<div class="summernote-theme-1">
-									<textarea  id="tick_descrip" name="tick_descrip" class="summernote" name="name"></textarea>
+									<textarea id="tick_descrip" name="tick_descrip" class="summernote" name="name"></textarea>
 								</div>
 							</fieldset>
 						</div>
 						<div class="col-lg-12">
 							<button type="submit" name="action" value="add" class="btn btn-rounded btn-inline btn-primary">Guardar</button>
 						</div>
-					</form>	
-                </div>
+					</form>
+				</div>
 
-            </div>
+			</div>
 		</div>
 	</div>
+	<!-- Contenido -->
 
-    <?php
-        require_once("../MainJs/js.php");
-    ?>
-    <script type="text/javascript" src="nuevoticket.js"></script>
-
-<?php
-
-}else{
-    header("Location:".Conectar::ruta()."index.php");
-}
-
-?>
+	<?php require_once("../MainJs/js.php");?>
+	
+	<script type="text/javascript" src="nuevoticket.js"></script>
 
 </body>
 </html>
+<?php
+  } else {
+    header("Location:".Conectar::ruta()."index.php");
+  }
+?>

@@ -96,7 +96,7 @@
         public function get_usuario(){
             $conectar= parent::conexion();
             parent::set_names();
-            $sql="call sp_l_usuario_01()";
+            $sql="SELECT * FROM tm_usuario where est='1'";
             $sql=$conectar->prepare($sql);
             $sql->execute();
             return $resultado=$sql->fetchAll();
@@ -105,7 +105,7 @@
         public function get_usuario_x_id($usu_id){
             $conectar= parent::conexion();
             parent::set_names();
-            $sql="call sp_l_usuario_02(?)";
+            $sql="SELECT * FROM tm_usuario where usu_id=?";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $usu_id);
             $sql->execute();

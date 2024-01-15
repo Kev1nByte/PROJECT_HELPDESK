@@ -6,7 +6,7 @@
     $ticket = new Ticket();
 
     switch($_GET["op"]){
-
+        
         case "insert":
             $ticket->insert_ticket($_POST["usu_id"],$_POST["cat_id"],$_POST["tick_titulo"],$_POST["tick_descrip"]);
         break;
@@ -15,11 +15,10 @@
             $ticket->update_ticket($_POST["tick_id"]);
             $ticket->insert_ticketdetalle_cerrar($_POST["tick_id"],$_POST["usu_id"]);
         break;
-   
+
         case "listar_x_usu":
             $datos=$ticket->listar_ticket_x_usu($_POST["usu_id"]);
             $data= Array();
-            
             foreach($datos as $row){
                 $sub_array = array();
                 $sub_array[] = $row["tick_id"];
@@ -48,7 +47,6 @@
         case "listar":
             $datos=$ticket->listar_ticket();
             $data= Array();
-            
             foreach($datos as $row){
                 $sub_array = array();
                 $sub_array[] = $row["tick_id"];
@@ -88,7 +86,7 @@
                                     <div class="activity-line-item-user">
                                         <div class="activity-line-item-user-photo">
                                             <a href="#">
-                                                <img src="../../public/<?php echo $row["rol_id"] ?>.jpg" alt="">
+                                                <img src="../../public/<?php echo $row['rol_id'] ?>.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="activity-line-item-user-name"><?php echo $row['usu_nom'].' '.$row['usu_ape'];?></div>
@@ -192,6 +190,6 @@
             $datos=$ticket->get_ticket_grafico();  
             echo json_encode($datos);
         break;
-        
+
     }
 ?>

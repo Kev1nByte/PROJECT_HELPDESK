@@ -1,8 +1,8 @@
 <?php
 
     session_start();
-
     class Conectar{
+
         protected $dbh;
 
         protected function Conexion(){

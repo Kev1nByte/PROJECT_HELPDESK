@@ -61,6 +61,7 @@ $(document).ready(function(){
                 }
             }     
         }).DataTable(); 
+        
     }else{
         tabla=$('#ticket_data').dataTable({
             "aProcessing": true,

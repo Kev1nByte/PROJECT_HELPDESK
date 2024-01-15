@@ -112,6 +112,7 @@ function eliminar(usu_id){
         cancelButtonText: "No",
         closeOnConfirm: false
     },
+    
     function(isConfirm) {
         if (isConfirm) {
             $.post("../../controller/usuario.php?op=eliminar", {usu_id : usu_id}, function (data) {

@@ -1,3 +1,4 @@
+
 function init(){
    
     $("#ticket_form").on("submit",function(e){
@@ -6,9 +7,8 @@ function init(){
     
 }
 
-
 $(document).ready(function() {
-	$('#tick_descrip').summernote({
+    $('#tick_descrip').summernote({
         height: 150,
         lang: "es-ES",
         callbacks: {

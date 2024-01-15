@@ -13,7 +13,7 @@
         <button class="hamburger hamburger--htla">
             <span>toggle menu</span>
         </button>
-
+        
         <div class="site-header-content">
             <div class="site-header-content-in">
                 <div class="site-header-shown">
@@ -31,14 +31,14 @@
                 </div>
 
                 <div class="mobile-menu-right-overlay"></div>
-                
-                <input type="hidden" id="user_idx" value="<?php echo $_SESSION["usu_id"] ?>"> <!-- ID del Usuario-->
-                <input type="hidden" id="rol_idx" value="<?php echo $_SESSION["rol_id"] ?>"> <!-- Rol del Usuario-->
+
+                <input type="hidden" id="user_idx" value="<?php echo $_SESSION["usu_id"] ?>"><!-- ID del Usuario-->
+                <input type="hidden" id="rol_idx" value="<?php echo $_SESSION["rol_id"] ?>"><!-- Rol del Usuario-->
 
                 <div class="dropdown dropdown-typical">
                     <a href="#" class="dropdown-toggle no-arr">
                         <span class="font-icon font-icon-user"></span>
-                        <span class="lblcontactonomx"><?php echo $_SESSION["usu_nom"] ?> <?php echo $_SESSION["usu_ape"] ?></span> 
+                        <span class="lblcontactonomx"><?php echo $_SESSION["usu_nom"] ?> <?php echo $_SESSION["usu_ape"] ?></span>
                     </a>
                 </div>
 

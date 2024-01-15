@@ -1,33 +1,21 @@
 <?php
-
-    require_once("../../config/conexion.php");
-    if (isset($_SESSION["usu_id"])) {
-   
+  require_once("../../config/conexion.php"); 
+  if(isset($_SESSION["usu_id"])){ 
 ?>
-
 <!DOCTYPE html>
 <html>
-<head lang="es">
-
-    <?php
-        require_once("../MainHead/head.php");
-    ?>
-	
-    <title>Kevin Byte::Mantenimiento Usuario</title>
+    <?php require_once("../MainHead/head.php");?>
+	<title>Kevin Byte::Mantenimiento Usuario</title>
 </head>
 <body class="with-side-menu">
 
-    <?php
-        require_once("../MainHeader/header.php");
-    ?>
+    <?php require_once("../MainHeader/header.php");?>
 
-	<div class="mobile-menu-left-overlay"></div>
-	
-    <?php
-        require_once("../MainNav/nav.php");
-    ?>
+    <div class="mobile-menu-left-overlay"></div>
+    
+    <?php require_once("../MainNav/nav.php");?>
 
-    <!-- Contenido     -->
+	<!-- Contenido -->
 	<div class="page-content">
 		<div class="container-fluid">
 			<header class="section-header">
@@ -44,7 +32,7 @@
 				</div>
 			</header>
 
-            <div class="box-typical box-typical-padding">
+			<div class="box-typical box-typical-padding">
 				<button type="button" id="btnnuevo" class="btn btn-inline btn-primary">Nuevo Registro</button>
 				<table id="usuario_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
 					<thead>
@@ -66,23 +54,18 @@
 
 		</div>
 	</div>
+	<!-- Contenido -->
 
-	<?php
-        require_once("modalmantenimiento.php");
-    ?>
+	<?php require_once("modalmantenimiento.php");?>
 
-    <?php
-        require_once("../MainJs/js.php");
-    ?>
-    <script type="text/javascript" src="mntusuario.js"></script>
-
-    <?php
-
-    }else{
-        header("Location:".Conectar::ruta()."index.php");
-    }
-
-    ?>
+	<?php require_once("../MainJs/js.php");?>
+	
+	<script type="text/javascript" src="mntusuario.js"></script>
 
 </body>
 </html>
+<?php
+  } else {
+    header("Location:".Conectar::ruta()."index.php");
+  }
+?>

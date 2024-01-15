@@ -8,7 +8,7 @@ $(document).ready(function(){
     listardetalle(tick_id);
 
     $('#tickd_descrip').summernote({
-        height: 350,
+        height: 400,
         lang: "es-ES",
         callbacks: {
             onImageUpload: function(image) {
@@ -22,12 +22,12 @@ $(document).ready(function(){
     });
 
     $('#tickd_descripusu').summernote({
-        height: 350,
-        lang: "es-ES",
-    });
+        height: 400,
+        lang: "es-ES"
+    });  
 
     $('#tickd_descripusu').summernote('disable');
-    
+
 });
 
 var getUrlParameter = function getUrlParameter(sParam) {
@@ -109,7 +109,7 @@ function listardetalle(tick_id){
         $('#tick_titulo').val(data.tick_titulo);
         $('#tickd_descripusu').summernote ('code',data.tick_descrip);
 
-        //console.log( data.tick_estado_texto);
+        console.log( data.tick_estado_texto);
         if (data.tick_estado_texto == "Cerrado"){
             $('#pnldetalle').hide();
         }
