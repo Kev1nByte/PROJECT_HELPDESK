@@ -8,6 +8,10 @@ function init(){
 
 $(document).ready(function(){
 
+    $.post("../../controller/usuario.php?op=combo", function (data) {
+        $('#usu_asig').html(data);
+    });
+
     if (rol_id==1){
         tabla=$('#ticket_data').dataTable({
             "aProcessing": true,
@@ -120,6 +124,17 @@ $(document).ready(function(){
 
 function ver(tick_id){
     window.open('http://localhost/Project_Helpdesk/view/DetalleTicket/?ID=' + tick_id +'');
+}
+
+function asignar(tick_id){
+    $.post("../../controller/ticket.php?op=mostrar", {tick_id : tick_id}, function (data) {
+        data = JSON.parse(data);
+        $('#tick_id').val(data.tick_id);
+
+        $('#mdltitulo').html('Asignar Agente');
+        $("#modalasignar").modal('show');
+    });
+ 
 }
 
 init();
