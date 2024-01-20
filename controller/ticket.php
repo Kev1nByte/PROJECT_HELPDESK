@@ -18,6 +18,10 @@
             $ticket->insert_ticketdetalle_cerrar($_POST["tick_id"],$_POST["usu_id"]);
         break;
 
+        case "asignar":
+            $ticket->update_ticket_asignacion($_POST["tick_id"],$_POST["usu_asig"]);
+        break;
+
         case "listar_x_usu":
             $datos=$ticket->listar_ticket_x_usu($_POST["usu_id"]);
             $data= Array();
