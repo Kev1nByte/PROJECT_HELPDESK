@@ -1,18 +1,20 @@
 <?php
-
     session_start();
-    class Conectar{
 
+    class Conectar{
         protected $dbh;
 
         protected function Conexion(){
-            try{
-                $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=helpdesk","root","");
-                return $conectar;
-            }catch(Exception $e){
-                print "¡Error BD!: " . $e->getMessage() . "<br/>";
-                die();
-            }
+            try {
+                //Local
+				$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=helpdesk","root","");
+                //Produccion
+                //$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=helpdesk","kevin","byte2024");
+				return $conectar;
+			} catch (Exception $e) {
+				print "¡Error BD!: " . $e->getMessage() . "<br/>";
+				die();
+			}
         }
 
         public function set_names(){
@@ -20,9 +22,11 @@
         }
 
         public static function ruta(){
+            //Local
 			return "http://localhost/Project_Helpdesk/";
-        }
+            //Produccion
+            //return "http://helpdesk.kevin-byte.com/";
+		}
 
     }
-
 ?>
