@@ -42,19 +42,30 @@ function guardaryeditar(e){
     if ($('#tick_descrip').summernote('isEmpty') || $('#tick_titulo').val()==''){
         swal("Advertencia!", "Campos Vacios", "warning");
     }else{
+        var totalfiles = $('#fileElem').val().length;
+        for (var i = 0; i < totalfiles; i++) {
+            formData.append("files[]", $('#fileElem')[0].files[i]);
+        }
+
         $.ajax({
             url: "../../controller/ticket.php?op=insert",
             type: "POST",
             data: formData,
             contentType: false,
             processData: false,
-            success: function(datos){  
-                console.log(datos);
+            success: function(data){
+                data = JSON.parse(data);
+                console.log(data[0].tick_id);
+
+                $.post("../../controller/email.php?op=ticket_abierto", {tick_id : data[0].tick_id}, function (data) {
+
+                });
+
                 $('#tick_titulo').val('');
                 $('#tick_descrip').summernote('reset');
                 swal("Correcto!", "Registrado Correctamente", "success");
-            }  
-        }); 
+            }
+        });
     }
 }
 
