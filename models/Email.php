@@ -10,8 +10,8 @@ require_once("../Models/Ticket.php");
 class Email extends PHPMailer{
 
     //variable que contiene el correo del destinatario
-    protected $gCorreo = 'tu correo';
-    protected $gContrasena = 'tus contraseña';
+    protected $gCorreo = 'tu correo: example@example.com';
+    protected $gContrasena = 'tu contraseña: example.com';
     //variable que contiene la contraseña del destinatario
 
     public function ticket_abierto($tick_id){
