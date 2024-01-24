@@ -48,6 +48,11 @@
             $ticket->insert_ticketdetalle_cerrar($_POST["tick_id"],$_POST["usu_id"]);
         break;
 
+        case "reabrir":
+            $ticket->reabrir_ticket($_POST["tick_id"]);
+            $ticket->insert_ticketdetalle_reabrir($_POST["tick_id"],$_POST["usu_id"]);
+        break;
+
         case "asignar":
             $ticket->update_ticket_asignacion($_POST["tick_id"],$_POST["usu_asig"]);
         break;
