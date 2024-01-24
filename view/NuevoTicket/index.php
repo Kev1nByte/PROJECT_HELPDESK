@@ -2,12 +2,12 @@
 
   require_once("../../config/conexion.php"); 
   if(isset($_SESSION["usu_id"])){ 
-	
+
 ?>
 <!DOCTYPE html>
 <html>
     <?php require_once("../MainHead/head.php");?>
-	<title>AnderCode</>::Nuevo Ticket</title>
+	<title>Kevin Byte::Mantenimiento Usuario</title>
 </head>
 <body class="with-side-menu">
 
