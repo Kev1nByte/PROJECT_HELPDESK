@@ -1,10 +1,8 @@
 
 function init(){
-
     $("#ticket_form").on("submit",function(e){
         guardaryeditar(e);
     });
-    
 }
 
 $(document).ready(function() {
@@ -63,9 +61,9 @@ function guardaryeditar(e){
             contentType: false,
             processData: false,
             success: function(data){
-                console.log(data);
+                //console.log(data);
                 data = JSON.parse(data);
-                console.log(data[0].tick_id);
+                //console.log(data[0].tick_id);
 
                 $.post("../../controller/email.php?op=ticket_abierto", {tick_id : data[0].tick_id}, function (data) {
 

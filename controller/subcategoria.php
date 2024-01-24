@@ -10,7 +10,7 @@
             if(is_array($datos)==true and count($datos)>0){
                 foreach($datos as $row)
                 {
-                    $html.="<option label='Seleccionar'></option>";
+                    //$html.="<option label='Seleccionar'></option>";
                     $html.= "<option value='".$row['cats_id']."'>".$row['cats_nom']."</option>";
                 }
                 echo $html;
