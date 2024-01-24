@@ -2,12 +2,12 @@
 
 require_once("../../config/conexion.php");
 if (isset($_SESSION["usu_id"])) {
-  
+
 ?>
   <!DOCTYPE html>
   <html>
   <?php require_once("../MainHead/head.php"); ?>
-  <title>Kevin Byte::Detalle Ticket</title>
+  <title>Kevin Byte::Consultar Ticket</title>
   </head>
 
   <body class="with-side-menu">
@@ -72,6 +72,7 @@ if (isset($_SESSION["usu_id"])) {
                   </table>
                 </fieldset>
               </div>
+
 
               <div class="col-lg-12">
                 <fieldset class="form-group">

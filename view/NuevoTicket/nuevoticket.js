@@ -1,8 +1,8 @@
 
 function init(){
-   
+
     $("#ticket_form").on("submit",function(e){
-        guardaryeditar(e);	
+        guardaryeditar(e);
     });
     
 }
@@ -54,6 +54,7 @@ function guardaryeditar(e){
             contentType: false,
             processData: false,
             success: function(data){
+                console.log(data);
                 data = JSON.parse(data);
                 console.log(data[0].tick_id);
 

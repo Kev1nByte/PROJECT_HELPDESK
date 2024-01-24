@@ -37,6 +37,7 @@ $(document).ready(function(){
                     console.log(e.responseText);	
                 }
             },
+            "ordering": false,
             "bDestroy": true,
             "responsive": true,
             "bInfo":true,
@@ -67,7 +68,6 @@ $(document).ready(function(){
                 }
             }     
         }).DataTable(); 
-        
     }else{
         tabla=$('#ticket_data').dataTable({
             "aProcessing": true,
@@ -149,6 +149,13 @@ function guardar(e){
         contentType: false,
         processData: false,
         success: function(datos){
+            var tick_id = $('#tick_id').val();
+            $.post("../../controller/email.php?op=ticket_asignado", {tick_id : tick_id}, function (data) {
+
+            });
+
+            swal("Correcto!", "Asignado Correctamente", "success");
+
             $("#modalasignar").modal('hide');
             $('#ticket_data').DataTable().ajax.reload();
         }

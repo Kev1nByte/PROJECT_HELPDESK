@@ -127,7 +127,7 @@
         public function insert_ticketdetalle($tick_id,$usu_id,$tickd_descrip){
             $conectar= parent::conexion();
             parent::set_names();
-            $sql="INSERT INTO tm_ticket (tick_id,usu_id,cat_id,tick_titulo,tick_descrip,tick_estado,fech_crea,usu_asig,fech_asig,est) VALUES (NULL,?,?,?,?,'Abierto',now(),NULL,NULL,'1');";
+                $sql="INSERT INTO td_ticketdetalle (tickd_id,tick_id,usu_id,tickd_descrip,fech_crea,est) VALUES (NULL,?,?,?,now(),'1');";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $tick_id);
             $sql->bindValue(2, $usu_id);

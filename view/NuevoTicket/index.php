@@ -1,31 +1,24 @@
 <?php
 
-    require_once("../../config/conexion.php");
-    if (isset($_SESSION["usu_id"])) {
-   
-?>
+  require_once("../../config/conexion.php"); 
+  if(isset($_SESSION["usu_id"])){ 
 
+?>
 <!DOCTYPE html>
 <html>
-<head lang="es">
-
-    <?php
-        require_once("../MainHead/head.php");
-    ?>
-	
-    <title>Kevin Byte::Nuevo Ticket</title>
+    <?php require_once("../MainHead/head.php");?>
+	<title>Kevin Byte::Nuevo Ticket</title>
 </head>
 <body class="with-side-menu">
 
     <?php require_once("../MainHeader/header.php");?>
 
     <div class="mobile-menu-left-overlay"></div>
-    
+
     <?php require_once("../MainNav/nav.php");?>
 
 	<!-- Contenido -->
 	<div class="page-content">
-		
 		<div class="container-fluid">
 
 			<header class="section-header">
@@ -60,20 +53,23 @@
 								<input type="text" class="form-control" id="tick_titulo" name="tick_titulo" placeholder="Ingrese Titulo">
 							</fieldset>
 						</div>
+
 						<div class="col-lg-6">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="exampleInput">Categoria</label>
 								<select id="cat_id" name="cat_id" class="form-control">
-									
+
 								</select>
 							</fieldset>
 						</div>
+
 						<div class="col-lg-6">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="exampleInput">Documentos Adicionales</label>
 								<input type="file" name="fileElem" id="fileElem" class="form-control" multiple>
 							</fieldset>
 						</div>
+
 						<div class="col-lg-12">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="tick_descrip">Descripción</label>
@@ -94,7 +90,7 @@
 	<!-- Contenido -->
 
 	<?php require_once("../MainJs/js.php");?>
-	
+
 	<script type="text/javascript" src="nuevoticket.js"></script>
 
 </body>

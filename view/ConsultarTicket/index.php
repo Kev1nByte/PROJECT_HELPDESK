@@ -38,7 +38,7 @@
 			<div class="box-typical box-typical-padding">
 				<table id="ticket_data" class="table table-bordered table-striped table-vcenter js-dataTable-full">
 					<thead>
-					<tr>
+						<tr>
 							<th style="width: 5%;">Nro.Ticket</th>
 							<th style="width: 15%;">Categoria</th>
 							<th class="d-none d-sm-table-cell" style="width: 40%;">Titulo</th>
@@ -58,11 +58,10 @@
 		</div>
 	</div>
 	<!-- Contenido -->
-
 	<?php require_once("modalasignar.php");?>
 
 	<?php require_once("../MainJs/js.php");?>
-		
+
 	<script type="text/javascript" src="consultarticket.js"></script>
 
 </body>
