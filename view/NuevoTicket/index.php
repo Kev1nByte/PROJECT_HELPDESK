@@ -2,12 +2,12 @@
 
   require_once("../../config/conexion.php"); 
   if(isset($_SESSION["usu_id"])){ 
-
+	
 ?>
 <!DOCTYPE html>
 <html>
     <?php require_once("../MainHead/head.php");?>
-	<title>Kevin Byte::Nuevo Ticket</title>
+	<title>AnderCode</>::Nuevo Ticket</title>
 </head>
 <body class="with-side-menu">
 
@@ -54,16 +54,25 @@
 							</fieldset>
 						</div>
 
-						<div class="col-lg-6">
+						<div class="col-lg-4">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="exampleInput">Categoria</label>
-								<select id="cat_id" name="cat_id" class="form-control">
-
+								<select id="cat_id" name="cat_id" class="form-control" data-placeholder="Seleccionar">
+									
 								</select>
 							</fieldset>
 						</div>
 
-						<div class="col-lg-6">
+						<div class="col-lg-4">
+							<fieldset class="form-group">
+								<label class="form-label semibold" for="exampleInput">SubCategoria</label>
+								<select id="cats_id" name="cats_id" class="form-control" data-placeholder="Seleccionar">
+									<option label="Seleccionar"></option>
+								</select>
+							</fieldset>
+						</div>
+
+						<div class="col-lg-4">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="exampleInput">Documentos Adicionales</label>
 								<input type="file" name="fileElem" id="fileElem" class="form-control" multiple>
